@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import cmd
+from macpath import split
 import models
 from models.base_model import BaseModel
 from models.user import User

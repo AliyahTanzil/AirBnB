@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-
+# -*- coding: utf-8 -*-
 
 import uuid
 from datetime import datetime
-import models
+import models 
 
 
 class BaseModel:
