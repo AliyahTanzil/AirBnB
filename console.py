@@ -211,6 +211,7 @@ class HBNBCommand(cmd.Cmd):
             print("** value missing **")
             return False
         return True
+        
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
