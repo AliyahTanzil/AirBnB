@@ -16,7 +16,8 @@ class HBNBCommand(cmd.Cmd):
     """aclass that contains the entry point of the command interpreter."""
 
     prompt = "(hbnb) "
-    class_list = ["BaseModel", "User", "State", "City", "Amenity", "Place", "Review"]
+    class_list = ["BaseModel", "User", "State", "City",
+                  "Amenity", "Place", "Review"]
 
     def do_EOF(self, args):
         """EOF command to exit the program."""
@@ -170,7 +171,8 @@ class HBNBCommand(cmd.Cmd):
             else:
                 HBNBCommand.do_update(
                     self,
-                    class_name + " " + split3[0] + " " + split3[1] + " " + split3[2],
+                    class_name + " " + split3[0] + " " + split3[1] +
+                    " " + split3[2],
                 )
 
     @classmethod
