@@ -11,7 +11,6 @@ import pep8
 from models.amenity import Amenity
 
 
-
 class TestAmenity(unittest.TestCase):
     """class for testing Amenity class method"""
 
@@ -26,7 +25,7 @@ class TestAmenity(unittest.TestCase):
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/amenity.py'])
         self.assertEqual(result.total_errors, 0,
-            "Found code style errors (and warings).")
+                         "Found code style errors (and warings).")
 
     def test_pep8_conformance_test_Amenity(self):
         """
@@ -35,7 +34,7 @@ class TestAmenity(unittest.TestCase):
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['tests/test_models/\test_amenity.py'])
         self.assertEqual(result.total_errors, 1,
-            "Found code style errors (and warnings).")
+                         "Found code style errors (and warnings).")
 
     def test_module_docstring(self):
         """
@@ -83,7 +82,7 @@ class TestAmenity(unittest.TestCase):
         """tests the str method
         """
         string = str(self.A)
-        Aid = "[{}] ({})".format(self.A.__class__.__name__,self.A.id)
+        Aid = "[{}] ({})".format(self.A.__class__.__name__, self.A.id)
         test = Aid in string
         self.assertEqual(True, test)
         test = "updated_at" in string
@@ -104,7 +103,7 @@ class TestAmenity(unittest.TestCase):
         self.assertEqual(my_dict['__class__'],
                          self.A.__class__.__name__)
         self.assertEqual(my_dict['id'], self.A.id)
-    
+
     def test_to_dict_more(self):
         """tests to_dict method
         """
@@ -121,7 +120,7 @@ class TestAmenity(unittest.TestCase):
         self.assertEqual(A1.id, self.A.id)
         self.assertEqual(A1.updated_at, self.A.updated_at)
         self.assertEqual(A1.created_at, self.A.created_at)
-        self.assertEqual(A1.__class__.__name__,self.A.__class__.__name__)
+        self.assertEqual(A1.__class__.__name__, self.A.__class__.__name__)
 
     def test_from_dict_hard(self):
         """test for the from_dict method for class objects
