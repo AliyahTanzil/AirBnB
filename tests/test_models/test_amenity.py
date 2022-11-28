@@ -10,6 +10,7 @@ from contextlib import redirect_stdout
 from models.amenity import Amenity
 import pep8
 
+
 class TestAmenity(unittest.TestCase):
     """class for testing Amenity class method"""
 
@@ -23,7 +24,8 @@ class TestAmenity(unittest.TestCase):
 
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['models/amenity.py'])
-        self.assertEqual(result.total_errors, 0, "Found code style errors (and warings).")
+        self.assertEqual(result.total_errors, 0,
+            "Found code style errors (and warings).")
 
     def test_pep8_conformance_test_Amenity(self):
         """
@@ -31,7 +33,8 @@ class TestAmenity(unittest.TestCase):
         """
         pep8style = pep8.StyleGuide(quiet=True)
         result = pep8style.check_files(['tests/test_models/\test_amenity.py'])
-        self.assertEqual(result.total_errors, 1,"Found code style errors (and warnings).")
+        self.assertEqual(result.total_errors, 1,
+            "Found code style errors (and warnings).")
 
     def test_module_docstring(self):
         """
