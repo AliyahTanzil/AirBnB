@@ -5,10 +5,11 @@ import sys
 import unittest
 import inspect
 import io
-from datetime import datetime 
+from datetime import datetime
 from contextlib import redirect_stdout
-from models.amenity import Amenity
 import pep8
+from models.amenity import Amenity
+
 
 
 class TestAmenity(unittest.TestCase):
