@@ -103,7 +103,7 @@ class TestFileStorage(unittest.TestCase):
         key2 = 'State.412409120491902491209491024'
         try:
             self.assertRaises(temp_d[key2], KeyError)
-        except:
+        except key2:
             pass
 
     def test_reload(self):
@@ -118,7 +118,7 @@ class TestFileStorage(unittest.TestCase):
         key2 = 'State.412409120491902491209491024'
         try:
             self.assertRaises(obj_d[key2], KeyError)
-        except:
+        except key2:
             pass
 
     def test_delete_basic(self):
@@ -129,7 +129,7 @@ class TestFileStorage(unittest.TestCase):
         key2 += str(self.temp_objs[2].id)
         try:
             self.assertRaises(obj_d[key2], KeyError)
-        except:
+        except key2:
             pass
 
     def test_new_basic(self):
